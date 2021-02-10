@@ -45,6 +45,7 @@ case "$1" in
         echo - gsi_arm_ab \(arm partitionA/B \)
         echo - gsi_arm64_a \(arm64 partitionAonly \)
         echo - gsi_arm_a \(arm partitionAonly \)
+        echo More detail about which type your device\: https://github.com/phhusson/treble_experimentations/wiki
         exit -1
         ;;
 esac

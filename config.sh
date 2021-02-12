@@ -97,7 +97,7 @@ case "$1" in
 	echo TARGET_NAME=onyx  >> .tmp-config &&
 	repo_sync $1
 	;;
-"gsi_b2g")
+"b2g_gsi")
 	repo_sync gsi
 	;;	
 *)
@@ -109,7 +109,7 @@ case "$1" in
 	echo - emulator-10-x86_64
 	echo - sargo \(Google Pixel 3a\)
 	echo - onyx  \(OnePlus X\)
-	echo - gsi_b2g \(Generic System Images\)
+	echo - b2g_gsi \(B2G Generic System Images\)
 	exit -1
 	;;
 esac

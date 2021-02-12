@@ -64,12 +64,14 @@ At boot time, you might need `adb shell setenforce 0` for B2G to boot (flash_sar
   
 If need to output a zip ROM file, you can use `./build.sh dist DIST_DIR=dist_output` instead of `./build.sh` in step 5.
 
-## Generic B2G System Images (GSI)
+## B2G Generic System Images (B2G-GSI)
+Maybe support devices [list](https://github.com/phhusson/treble_experimentations/wiki)
 
 1. Fetch the code: `REPO_INIT_FLAGS="--depth=1" ./config.sh gsi_b2g`
 2. Setup your environment to fetch the custom NDK: `export LOCAL_NDK_BASE_URL='ftp://ftp.kaiostech.com/ndk/android-ndk'`
 3. Install Gecko dependencies: `cd gecko && ./mach bootstrap`, choose option 4 (Android Geckoview).
-4. Apply patch: `./patcher/patcher.sh`
+4. Apply patch: `./patcher/patcher.sh` 
+   - NOTE：If find patch failed, do `repo sync` rollback HEAD.
 5. Build: `./build-gsi.sh [type name] systemimage`
 
    type:

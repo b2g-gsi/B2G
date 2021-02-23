@@ -100,9 +100,11 @@ case "$1" in
 "gsi_b2g")
 	repo_sync gsi
 	;;	
-"gsi_q")
+"gsi_q_arm64")
+	echo PRODUCT_NAME=aosp_arm64 >> .tmp-config &&
+        echo TARGET_NAME=generic >> .tmp-config &&
 	repo_sync gsi_q
-	;;	
+	;;
 *)
 	echo "Usage: $0 [-cdflnq] [-j <jobs>] [--force-sync] (device name)"
 	echo "Flags are passed through to |./repo sync|."

@@ -100,6 +100,9 @@ case "$1" in
 "gsi_b2g")
 	repo_sync gsi
 	;;	
+"gsi_q")
+	repo_sync gsi_q
+	;;	
 *)
 	echo "Usage: $0 [-cdflnq] [-j <jobs>] [--force-sync] (device name)"
 	echo "Flags are passed through to |./repo sync|."
